@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+:root {
+    --accent-color: rgb(255, 255, 255);
+    --text-color: rgb(200, 200, 200);
+    --background-color: rgb(25, 25, 25);
+}
+
+body, html {
+    font-family: "Unbounded", system-ui;
+    font-optical-sizing: auto;
+
+    background-color: var(--background-color);
+    margin: 0;
+
+    user-select: none;
+}
+
+.entry-page {
+    background-color: black;
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.entry-text {
+    color: var(--accent-color);
+    z-index: 9999;
+    position: absolute;
+    margin: 0;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-container {
+    opacity: 0;
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-container > .name {
+    color: var(--accent-color);
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.main-container > .bio {
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.song {
+    opacity: 0;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 0.8rem;
+    vertical-align: bottom;
+    transition: color 0.3s;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--accent-color);
+    }
+}
